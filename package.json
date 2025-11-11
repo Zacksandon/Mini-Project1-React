@@ -1,15 +1,13 @@
 {
-  "name": "curso-react-modulo-1",
+  "name": "mini-project1-react",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
-  "homepage": "https://zacksandon.github.io/Mini-Project1-React/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "react": "^19.1.1",
@@ -31,7 +29,6 @@
     "globals": "^16.3.0",
     "prettier": "^3.6.2",
     "tailwindcss": "^4.1.12",
-    "vite": "^7.1.2",
-    "gh-pages": "^6.1.1"
+    "vite": "^7.1.2"
   }
 }

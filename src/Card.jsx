@@ -19,44 +19,58 @@ export default function Card() {
 
   return (
     <div
-      className={`max-w-sm mx-auto p-6 shadow-md rounded-lg mt-5 transition duration-300 ${
-        darkMode ? 'bg-gray-800' : 'bg-white'
+      className={`flex items-center justify-center min-h-screen transition-colors duration-500 ${
+        darkMode ? 'bg-gray-900' : 'bg-gray-100'
       }`}
     >
-      {/* Imagen del perfil */}
-      <img
-        src="https://i.pravatar.cc/150?img=3"
-        alt="avatar"
-        className="rounded-full w-32 h-32 mx-auto"
-      />
-
-      {/* Nombre */}
-      <h2
-        className={`mt-4 text-2xl font-semibold text-center ${
-          darkMode ? 'text-white' : 'text-gray-800'
+      <div
+        className={`w-full max-w-sm p-8 rounded-2xl shadow-xl border transition duration-500 ${
+          darkMode
+            ? 'bg-gray-800 border-gray-700 text-white'
+            : 'bg-white border-gray-200 text-gray-800'
         }`}
       >
-        PEDRO RAMOS COTE
-      </h2>
+        {/* Imagen del perfil */}
+        <div className="flex justify-center">
+          <img
+            src="https://i.pravatar.cc/150?img=3"
+            alt="avatar"
+            className="rounded-full w-32 h-32 border-4 border-blue-500 shadow-md"
+          />
+        </div>
 
-      {/* Descripción */}
-      <p
-        className={`mt-2 text-center ${
-          darkMode ? 'text-white' : 'text-gray-600'
-        }`}
-      >
-        Desarrollador de Software Front-End apasionado por React y el diseño UI/UX
-      </p>
+        {/* Nombre */}
+        <h2
+          className={`mt-6 text-2xl font-bold text-center ${
+            darkMode ? 'text-white' : 'text-gray-900'
+          }`}
+        >
+          PEDRO RAMOS COTE
+        </h2>
 
-      {/* Botón de cambio de tema */}
-      <button
-        onClick={toggleTheme}
-        className={`mt-4 px-4 py-2 rounded shadow-md transition duration-300 ${
-          darkMode ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-800'
-        } hover:scale-105`}
-      >
-        CAMBIAR TEMA
-      </button>
+        {/* Descripción */}
+        <p
+          className={`mt-3 text-center text-base leading-relaxed ${
+            darkMode ? 'text-gray-300' : 'text-gray-600'
+          }`}
+        >
+          Desarrollador de Software Front-End apasionado por React y el diseño UI/UX.
+        </p>
+
+        {/* Botón de cambio de tema */}
+        <div className="flex justify-center">
+          <button
+            onClick={toggleTheme}
+            className={`mt-6 px-6 py-2 rounded-full font-semibold shadow-md transform transition duration-300 hover:scale-105 ${
+              darkMode
+                ? 'bg-blue-500 hover:bg-blue-600 text-white'
+                : 'bg-blue-600 hover:bg-blue-700 text-white'
+            }`}
+          >
+            CAMBIAR TEMA
+          </button>
+        </div>
+      </div>
     </div>
   )
 }
